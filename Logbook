@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+
+public class Logbook {
+    private ArrayList<String> entries;
+
+    // Constructor
+    public Logbook() {
+        entries = new ArrayList<>();
+    }
+
+    // Toevoegen van een logboekentry
+    public void addEntry(String entry) {
+        entries.add(entry);
+        System.out.println("Logboekentry toegevoegd: " + entry);
+    }
+
+    // Toon alle logboekentries
+    public void showLog() {
+        System.out.println("Logboek:");
+        for (String entry : entries) {
+            System.out.println(entry);
+        }
+    }
+}
