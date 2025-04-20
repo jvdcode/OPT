@@ -1,0 +1,30 @@
+public class Main {
+    public static void main(String[] args) {
+        // hier maak je een gebruiker aan
+        User user1 = new User("jorgevandie", "geheimwachtwoord");
+
+        // hier kan je inloggen
+            user1.login("jorgevandie", "geheimwachtwoord");
+
+        // maakt een PasswordManager aan en voeg een wachtwoord toe
+        PasswordManager passwordManager = new PasswordManager();
+        passwordManager.addPassword("dehaagehogeschool.nl", "geheimwachtwoord");
+
+        // hier haalt die het wachtwoord op de website
+        String password = passwordManager.getPassword("dehaagsehogeschool.nl");
+        System.out.println("Wachtwoord voor dehaagsehogeschool.nl: " + password);
+
+        // Maak een website aan en open deze
+        Website website = new Website("https://www.dehaagsehogeschool.nl/");
+        website.open();
+
+        // maakt een logboek aan en voegt een entry toe
+        Logbook logbook = new Logbook();
+        logbook.addEntry("Inloggen als jorgevandie");
+        logbook.addEntry("Wachtwoord toegevoegd voor dehaagehogeschool.nl");
+
+
+        logbook.showLog();
+    }
+}
+
