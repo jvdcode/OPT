@@ -1,0 +1,23 @@
+import java.awt.Desktop;
+import java.net.URI;
+
+public class Website {
+    private String url;
+
+    // Constructor
+    public Website(String url) {
+        this.url = url;
+    }
+
+    // Website openen
+    public void open() {
+        try {
+            Desktop desktop = Desktop.getDesktop();
+            URI uri = new URI(url);
+            desktop.browse(uri); // Open de website in de standaardbrowser
+            System.out.println("Website " + url + " wordt geopend.");
+        } catch (Exception e) {
+            System.out.println("Kan de website niet openen.");
+        }
+    }
+}
