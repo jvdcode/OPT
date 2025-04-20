@@ -1,0 +1,30 @@
+// User.java
+public class User {
+    private String username;
+    private String password;
+
+    // Constructor
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    // Methode voor inloggen
+    public void login(String inputUsername, String inputPassword) {
+        if (this.username.equals(inputUsername) && this.password.equals(inputPassword)) {
+            System.out.println(this.username + " is succesvol ingelogd!");
+        } else {
+            System.out.println("Ongeldige gebruikersnaam of wachtwoord.");
+        }
+    }
+
+    // Getters en Setters
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+}
+// PasswordManager.java
